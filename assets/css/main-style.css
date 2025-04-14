@@ -762,7 +762,7 @@ section.main-banner {
 }
 
 .main-banner .right-image {
-    margin-left: 120px;
+    margin-left: -92px;
     position: relative;
     z-index: 2;
 }
@@ -2307,6 +2307,12 @@ body {
         font-size: 22px;
     }
 
+    /*section.more-info .prices-image {*/
+    /*    width: 1px;*/
+    /*    height: auto;*/
+    /*}*/
+
+
     @media (max-width: 1000px) {
         .main-banner .header-text h2 {
             position: relative;
@@ -2347,6 +2353,47 @@ body {
 
 @media (max-width: 1200px) {
     .main-banner .header-text::after {
+        display: none;
+    }
+}
+
+.price-image-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.price-image {
+    width: 130%;
+    border-radius: 15px;
+}
+
+@media (max-width: 1650px) {
+    .price-image {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .price-image {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    .rounded-image {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rounded-image {
+        width: 370px;
+    }
+}
+
+@media (max-width: 990px) {
+    .rounded-image {
         display: none;
     }
 }
