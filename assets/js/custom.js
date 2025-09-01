@@ -223,33 +223,58 @@
 	        });
 	    });
 	});
+    window.onload = function () {
+        if (typeof window.location.hash === "string" && window.location.hash.length > 1) {
+            var target = $(window.location.hash);
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 80
+                }, 50, 'swing');
+            }
+        }
+    };
+	// window.onload = function () {
+	// 	if (window.location.hash) {
+	// 		var target = $(window.location.hash);
+	// 			if (target.length) {
+	// 				$('html, body').animate({
+	// 					scrollTop: target.offset().top - 80
+	// 				}, 50, 'swing');
+	// 			}
+	// 		// Egy kis késleltetés, hogy biztosan felépüljön az oldal
+	// 	}
+	// };
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('.nav a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
 
-	window.onload = function () {
-		if (window.location.hash) {
-			var target = $(window.location.hash);
-				if (target.length) {
-					$('html, body').animate({
-						scrollTop: target.offset().top - 80
-					}, 50, 'swing');
-				}
-			// Egy kis késleltetés, hogy biztosan felépüljön az oldal
-		}
-	};
-
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
-	    });
-	}
+            if (refElement.length) {   // <--- csak akkor futtasd, ha tényleg létezik
+                if (refElement.position().top <= scrollPos &&
+                    refElement.position().top + refElement.height() > scrollPos) {
+                    $('.nav ul li a').removeClass("active");
+                    currLink.addClass("active");
+                } else {
+                    currLink.removeClass("active");
+                }
+            }
+        });
+    }
+	// function onScroll(event){
+	//     var scrollPos = $(document).scrollTop();
+	//     $('.nav a').each(function () {
+	//         var currLink = $(this);
+	//         var refElement = $(currLink.attr("href"));
+	//         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+	//             $('.nav ul li a').removeClass("active");
+	//             currLink.addClass("active");
+	//         }
+	//         else{
+	//             currLink.removeClass("active");
+	//         }
+	//     });
+	// }
 
 
 	// Page loading animation
@@ -309,43 +334,80 @@
         });
     }
 
+    function visible($el, partial) {
+        if (!$el || !$el.length) return false;
 
-	function visible(partial) {
-        var $t = partial,
-            $w = jQuery(window),
+        var $w = jQuery(window),
             viewTop = $w.scrollTop(),
             viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
-            _bottom = _top + $t.height(),
-            compareTop = partial === true ? _bottom : _top,
-            compareBottom = partial === true ? _top : _bottom;
+            _top = $el.offset().top,
+            _bottom = _top + $el.height(),
+            compareTop = partial ? _bottom : _top,
+            compareBottom = partial ? _top : _bottom;
 
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
-
+        return (
+            (compareBottom <= viewBottom) &&
+            (compareTop >= viewTop) &&
+            $el.is(':visible')
+        );
     }
-
+	// function visible(partial) {
+    //     if (!$el || !$el.length) return false;
+    //     var $t = partial,
+    //         $w = jQuery(window),
+    //         viewTop = $w.scrollTop(),
+    //         viewBottom = viewTop + $w.height(),
+    //         _top = $t.offset().top,
+    //         _bottom = _top + $t.height(),
+    //         compareTop = partial === true ? _bottom : _top,
+    //         compareBottom = partial === true ? _top : _bottom;
+    //
+    //     return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
+    //
+    // }
     $(window).scroll(function() {
-
-        if (visible($('.count-digit'))) {
+        if (visible($('.count-digit'), true)) {
             if ($('.count-digit').hasClass('counter-loaded')) return;
             $('.count-digit').addClass('counter-loaded');
 
             $('.count-digit').each(function() {
                 var $this = $(this);
-                jQuery({
-                    Counter: 0
-                }).animate({
-                    Counter: $this.text()
-                }, {
-                    duration: 3000,
-                    easing: 'swing',
-                    step: function() {
-                        $this.text(Math.ceil(this.Counter));
+                jQuery({ Counter: 0 }).animate(
+                    { Counter: $this.text() },
+                    {
+                        duration: 3000,
+                        easing: 'swing',
+                        step: function() {
+                            $this.text(Math.ceil(this.Counter));
+                        }
                     }
-                });
+                );
             });
         }
-    })
+    });
+
+    // $(window).scroll(function() {
+    //
+    //     if (visible($('.count-digit'))) {
+    //         if ($('.count-digit').hasClass('counter-loaded')) return;
+    //         $('.count-digit').addClass('counter-loaded');
+    //
+    //         $('.count-digit').each(function() {
+    //             var $this = $(this);
+    //             jQuery({
+    //                 Counter: 0
+    //             }).animate({
+    //                 Counter: $this.text()
+    //             }, {
+    //                 duration: 3000,
+    //                 easing: 'swing',
+    //                 step: function() {
+    //                     $this.text(Math.ceil(this.Counter));
+    //                 }
+    //             });
+    //         });
+    //     }
+    // })
 
 
 })(window.jQuery);
