@@ -35,7 +35,7 @@ font & reset css
 reset
 ---------------------------------------------
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div,
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
 s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 figure, header, nav, section, article, aside, footer, figcaption {
@@ -95,12 +95,12 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 ul {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 p {
@@ -152,7 +152,7 @@ body {
 
     .mobile-top-fix {
         margin-top: 30px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     .mobile-bottom-fix {
@@ -231,7 +231,7 @@ section.testimonials {
     position: relative;
     z-index: 2;
     padding-top: 20px;
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -306,7 +306,7 @@ header
     top: 0 !important;
     left: 0;
     right: 0;
-    box-shadow: 0px 0px 10px rgb(21, 21, 21) !important;
+    box-shadow: 0 0 10px rgb(21, 21, 21) !important;
 }
 
 /*külön fejléc képpel, ki van véve, javascriptben is*/
@@ -373,7 +373,7 @@ header
 }
 
 .header-area .main-nav .nav li:last-child {
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 .header-area .main-nav .nav li a {
@@ -434,9 +434,9 @@ header
 }
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu li {
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
@@ -653,14 +653,14 @@ header
 
     .header-area {
         background-color: #f7f7f7;
-        padding: 0px 15px;
+        padding: 0 15px;
         height: 100px;
         box-shadow: none;
         text-align: center;
     }
 
     .header-area .container {
-        padding: 0px;
+        padding: 0;
     }
 
     .header-area .logo {
@@ -683,7 +683,7 @@ header
         -moz-transition: all 0s ease 0s;
         -o-transition: all 0s ease 0s;
         transition: all 0s ease 0s;
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     .header-area .main-nav .nav li:first-child {
@@ -722,10 +722,10 @@ header
         opacity: 1;
         z-index: 1;
         transform: translateY(0%);
-        top: 0px;
+        top: 0;
         width: 100%;
         box-shadow: none;
-        height: 0px;
+        height: 0;
         transition: all 0s;
     }
 
@@ -735,7 +735,7 @@ header
     }
 
     .header-area .main-nav .nav li.submenu ul li a:hover:before {
-        width: 0px;
+        width: 0;
     }
 
     .header-area .main-nav .nav li.has-sub ul.sub-menu {
@@ -750,7 +750,7 @@ header
     }
 
     .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
-        height: 0px;
+        height: 0;
     }
 }
 
@@ -768,7 +768,7 @@ banner
 */
 
 section.main-banner {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .main-banner {
@@ -863,7 +863,7 @@ services
 }
 
 .services .item:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
 
 .services .item .icon {
@@ -891,7 +891,7 @@ services
     height: 10px;
     background-color: #ddd;
     border-radius: 50%;
-    margin: 0px 4px;
+    margin: 0 4px;
 }
 
 .services .owl-dots .active {
@@ -910,7 +910,7 @@ section.our-courses {
 }
 
 section.our-courses .section-heading p {
-    /*padding: 0px 60px;*/
+    /*padding: 0 60px;*/
 }
 
 section.our-courses:before {
@@ -960,7 +960,7 @@ section.our-courses .naccs .menu div {
 section.our-courses .naccs .menu div.active {
     color: #f7838f; /*GOMBSZÖVEG*/
     border: 2px solid rgb(255, 110, 136);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 section.our-courses ul.nacc {
@@ -982,7 +982,7 @@ section.our-courses ul.nacc li {
     list-style: none;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding-right: 50px;
 }
 
@@ -1046,8 +1046,8 @@ section.our-courses ul.nacc li .right-content span {
 }
 
 section.our-courses ul.nacc li .right-content .last-span {
-    margin-right: 0px;
-    padding-right: 0px;
+    margin-right: 0;
+    padding-right: 0;
     border-right: none;
 }
 
@@ -1084,7 +1084,7 @@ section.simple-cta {
     background-position: center center;
     background-size: cover;
     width: 100%;
-    padding: 140px 0px 280px 0px;
+    padding: 140px 0 280px 0;
 }
 
 section.simple-cta .left-image {
@@ -1134,7 +1134,7 @@ section.testimonials:before {
     position: absolute;
     content: '';
     background-image: url(../images/testimonials-left-dec-white.png);
-    left: 0px;
+    left: 0;
     top: -140px;
     width: 593px;
     height: 352px;
@@ -1145,7 +1145,7 @@ section.testimonials:after {
     position: absolute;
     content: '';
     background-image: url(../images/testimonials-right-dec-white.png);
-    right: 0px;
+    right: 0;
     bottom: -140px;
     width: 632px;
     height: 352px;
@@ -1163,7 +1163,7 @@ section.testimonials:after {
 }
 
 .testimonials .item:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
 
 .testimonials .item p {
@@ -1202,7 +1202,7 @@ section.testimonials:after {
     height: 10px;
     background-color: #ddd;
     border-radius: 50%;
-    margin: 0px 4px;
+    margin: 0 4px;
 }
 
 .testimonials .owl-dots .active {
@@ -1241,7 +1241,7 @@ section.contact-us:after {
 section.contact-us .contact-info {
     background-color: #fff;
     margin-top: -30px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     z-index: 5;
     position: relative;
@@ -1285,7 +1285,7 @@ section.contact-us #contact {
     z-index: 5;
     background-color: #fff;
     margin-top: 40px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     padding: 40px;
 }
@@ -1301,7 +1301,7 @@ section.contact-us #contact input {
     font-size: 13px;
     font-weight: 500;
     color: #7a7a7a;
-    padding: 0px 15px;
+    padding: 0 15px;
     margin-bottom: 30px;
 }
 
@@ -1343,7 +1343,7 @@ section.contact-us #contact button:hover {
 
 section.contact-us ul.social-icons li {
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 section.contact-us ul.social-icons {
@@ -1371,7 +1371,7 @@ section.contact-us ul.social-icons li a:hover {
 p.copyright {
     text-align: center;
     color: #fff;
-    margin: 40px 0px;
+    margin: 40px 0;
 }
 
 p.copyright a {
@@ -1389,7 +1389,7 @@ section.services-contact-us {
 }
 
 .spacing {
-    margin-top: 0px;
+    margin-top: 0;
     /*margin-bottom: 100px;*/
 }
 
@@ -1408,7 +1408,7 @@ section.services-contact-us {
 section.services-contact-us .contact-info {
     background-color: #fff;
     margin-top: -30px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     z-index: 5;
     position: relative;
@@ -1452,7 +1452,7 @@ section.services-contact-us #contact {
     z-index: 5;
     background-color: #fff;
     margin-top: 40px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     padding: 40px;
 }
@@ -1468,7 +1468,7 @@ section.services-contact-us #contact input {
     font-size: 13px;
     font-weight: 500;
     color: #7a7a7a;
-    padding: 0px 15px;
+    padding: 0 15px;
     margin-bottom: 30px;
 }
 
@@ -1510,7 +1510,7 @@ section.services-contact-us #contact button:hover {
 
 section.services-contact-us ul.social-icons li {
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0 5px;
 }
 
 section.services-contact-us ul.social-icons {
@@ -1538,7 +1538,7 @@ section.services-contact-us ul.social-icons li a:hover {
 p.copyright {
     text-align: center;
     color: #fff;
-    margin: 40px 0px;
+    margin: 40px 0;
 }
 
 p.copyright a {
@@ -1606,7 +1606,7 @@ section.get-info .info-item {
     border-radius: 15px;
     text-align: left;
     padding: 60px 30px 30px 30px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
     position: relative;
 }
 
@@ -1621,7 +1621,7 @@ section.get-info .info-item .icon {
     text-align: center;
     line-height: 80px;
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
 
 section.get-info .info-item .icon img {
@@ -1640,13 +1640,13 @@ section.our-team {
 }
 
 section.our-team .section-heading p {
-    padding: 0px 60px;
+    padding: 0 60px;
 }
 
 section.our-team:before {
     position: absolute;
     content: '';
-    background-image: url(../images/our-courses-left-dec-white.png);
+    /*background-image: url(../images/our-courses-left-dec-white.png);*/
     left: 45px;
     top: -140px;
     width: 291px;
@@ -1734,7 +1734,7 @@ section.our-team ul.nacc li {
     list-style: none;
     transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
     border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     padding: 40px;
 }
 
@@ -1782,8 +1782,8 @@ section.our-team ul.nacc li .left-content span a:hover {
 }
 
 section.our-team ul.nacc li .left-content .last-span a {
-    margin-right: 0px;
-    padding-right: 0px;
+    margin-right: 0;
+    padding-right: 0;
     border-right: none;
 }
 
@@ -1807,12 +1807,12 @@ section.our-team ul.nacc li p {
 }
 
 section.our-office .left-info {
-    margin-right: 0px;
+    margin-right: 0;
     position: relative;
     z-index: 5;
     background-color: #fff;
     margin-top: 40px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     padding: 40px;
 }
@@ -1831,7 +1831,7 @@ section.our-office .left-info ul li {
 }
 
 section.our-office .left-info ul li:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 section.our-office .left-info .main-button-gradient {
@@ -1884,8 +1884,8 @@ section.featured-product {
 section.featured-product:before {
     position: absolute;
     content: '';
-    background-image: url(../images/testimonials-left-dec.png);
-    left: 0px;
+    /*background-image: url(../images/testimonials-left-dec.png);*/
+    left: 0;
     top: -140px;
     width: 593px;
     height: 352px;
@@ -1896,7 +1896,7 @@ section.featured-product:after {
     position: absolute;
     content: '';
     /*background-image: url(../images/testimonials-right-dec.png);*/
-    right: 0px;
+    right: 0;
     bottom: -140px;
     width: 632px;
     height: 352px;
@@ -1907,13 +1907,13 @@ section.featured-product .info-item {
     border-radius: 15px;
     text-align: left;
     padding: 60px 30px 30px 30px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
     position: relative;
     margin-bottom: 90px;
 }
 
 section.featured-product .last-info {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 section.featured-product .left-info .info-item .icon {
@@ -1939,7 +1939,7 @@ section.featured-product .info-item .icon {
     text-align: center;
     line-height: 80px;
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
 
 section.featured-product .info-item .icon img {
@@ -1954,7 +1954,7 @@ section.featured-product .info-item h4 {
 }
 
 section.featured-product .product-image {
-    margin: 0px 60px;
+    margin: 0 60px;
 }
 
 
@@ -1973,10 +1973,12 @@ section.more-info .section-heading {
 }
 
 section.puppet .section-heading {
-    /*margin-bottom: 10px;*/
     text-align: left;
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
 }
 
 section.more-info .section-heading h4 {
@@ -1995,7 +1997,7 @@ section.more-info .section-heading h6 {
     font-weight: 700;
     text-transform: none;
     padding-left: 10px;
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 10px;
 }
 section.more-info .section-heading h5 {
@@ -2003,7 +2005,7 @@ section.more-info .section-heading h5 {
     padding-bottom: 10px;
 }
 .col-lg-7 {
-    padding-right: 0;
+    /*padding-right: 0;*/
 }
 
 .ml-5 {
@@ -2077,7 +2079,7 @@ section.puppet .count-area-content {
 
 section.more-info .count-area-content .count-digit {
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     text-align: center;
     display: inline-block;
@@ -2096,7 +2098,7 @@ section.more-info .count-area-content .count-digit {
 
 section.puppet.count-area-content .count-digit {
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     text-align: center;
     display: inline-block;
@@ -2115,7 +2117,7 @@ section.puppet.count-area-content .count-digit {
 
 section.more-info .count-area-content .count-title {
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     text-align: center;
     font-size: 20px;
@@ -2128,7 +2130,7 @@ section.more-info .count-area-content .count-title {
 
 section.puppet .count-area-content .count-title {
     background-color: #fff;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     text-align: center;
     font-size: 20px;
@@ -2276,19 +2278,19 @@ body {
     }
 
     .main-banner .right-image {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     section.our-courses ul.nacc {
-        margin-left: 0px !important;
+        margin-left: 0 !important;
     }
 
     section.simple-cta {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     section.simple-cta .left-image {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 45px;
     }
 
@@ -2297,7 +2299,7 @@ body {
     }
 
     section.contact-us #contact {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     section.contact-us #contact button {
@@ -2321,7 +2323,7 @@ body {
     }
 
     section.get-info .left-image {
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 30px;
     }
 
@@ -2330,7 +2332,7 @@ body {
     }
 
     section.our-office #video {
-        margin-left: 0px;
+        margin-left: 0;
         margin-top: 30px;
     }
 
@@ -2375,8 +2377,8 @@ body {
     section.our-courses ul.nacc li .left-image,
     section.our-team ul.nacc li .right-image {
         position: relative;
-        margin-right: 0px;
-        margin-left: 0px;
+        margin-right: 0;
+        margin-left: 0;
         transform: translateY(-0%);
     }
 
@@ -2387,23 +2389,23 @@ body {
 
     section.our-courses ul.nacc li,
     section.our-team ul.nacc li {
-        padding: 0px;
+        padding: 0;
     }
 
     section.our-courses ul.nacc li .right-content {
-        margin-left: 0px;
+        margin-left: 0;
         padding: 30px;
     }
 
     section.our-team ul.nacc li .left-content {
-        margin-right: 0px;
+        margin-right: 0;
         padding: 30px;
     }
 
     section.our-team .naccs .menu div {
         /*width: 14%;*/
         width: auto;
-        margin: 0px 5px;
+        margin: 0 5px;
     }
 
     section.our-team .naccs .menu div.active img {
@@ -2476,13 +2478,11 @@ body {
 
 .price-image-container {
     max-width: 600px;
-    margin: 0 auto;
-    padding-left: 0;
 }
 
 .puppet-image-container {
     max-width: 480px;
-    margin: 0;
+    /*margin: 0;*/
 }
 
 .price-image {
